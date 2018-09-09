@@ -146,9 +146,9 @@ $task = Task::find(1)->getImage()->getPath();
 $task = Task::find(1)->getAuthor()->getEmail();
 ```
 
-## Inserting & Updating Types
+## Inserting, Updating & Deleting Types
 
-### Inserts
+### Insert
 
 To create a new record in the database, create a new type instance, set attributes on the type, then call the save method:
 
@@ -183,7 +183,9 @@ $task = Task::setTitle('First task')
     ->save();
 ```
 
-### Updates
+### Update
+
+To update a record in the database, find a type instance, set attributes on the type, then call the update method:
 
 ```php
 <?php
@@ -193,4 +195,44 @@ use \Netro\Facade\Type\Task;
 $task = Task::find(1)
     ->setTitle('Updated task')
     ->update();
+```
+
+### Delete
+
+To delete a record in the database, find a type instance, then call the delete method:
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+$task = Task::find(1)->delete();
+```
+
+## Events
+
+Netro provides a few events like `saved` and `updated` with a powerful dependency resolver at your `Task.php` file.
+For example if you want to send an email notification everytime when a new type is created then just do something like this:
+
+```php
+<?php
+# netro/Type/Task.php
+
+namespace Netro\Type;
+
+use Netro\Support\Mail;
+
+class Task extends Type
+{
+    protected $postType = "product";
+
+    public function saved(Task $task, Mail $mail)
+    {
+        $mail->to("customer@example.com", "Customer")
+            ->from("owner@example.com", "Owner")
+            ->subject("New task created")
+            ->message("Task " . $task->getTitle() . " created successfully")
+            ->send();
+    }
+}
 ```
