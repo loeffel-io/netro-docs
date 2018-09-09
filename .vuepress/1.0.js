@@ -8,7 +8,7 @@ module.exports = [
   },
   {
     title: 'The Basics',
-    collapsable: true,
+    collapsable: false,
     children: prefix('basics', [
       '',
       'types',
@@ -16,7 +16,7 @@ module.exports = [
   },
   {
     title: 'Digging Deeper',
-    collapsable: true,
+    collapsable: false,
     children: prefix('deeper', [
       '',
       'commands'
