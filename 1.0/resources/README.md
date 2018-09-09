@@ -17,7 +17,7 @@ mix.js('./assets/js/app.js', './assets/dist')
 
 ### Installing Node
 
-Before triggering Mix, you must first ensure that Node.js and NPM are installed on your machine.
+Before triggering Mix, you must first ensure that [Node.js](https://nodejs.org) and [NPM](https://www.npmjs.com) are installed on your machine.
 
 ```bash
 node -v
@@ -82,7 +82,7 @@ The `app.js` file is predefined and ready to go at your `assets/js` directory.
 
 ## Including your dist files
 
-The Netro Theme includes your dist files already in the `header.php` and `footer.php` files:
+You have nothing to do - the Netro Theme includes your dist files already in the `header.php` and `footer.php` files:
 
 ```php
 # header.php

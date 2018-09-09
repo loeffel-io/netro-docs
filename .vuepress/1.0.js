@@ -8,10 +8,11 @@ module.exports = [
   },
   {
     title: 'Resources',
-    collapsable: false,
+    collapsable: true,
     children: prefix('resources', [
       '',
       'types',
+      'commands'
     ]),
   },
 ]

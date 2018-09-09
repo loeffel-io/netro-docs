@@ -2,8 +2,7 @@ module.exports = [
   {
     title: 'Getting Started',
     collapsable: false,
-    children: [''].concat(prefix('getting-started', [
-    ])),
+    children: [''].concat(prefix('getting-started', [])),
   },
   {
     title: 'Resources',
@@ -11,10 +10,11 @@ module.exports = [
     children: prefix('resources', [
       '',
       'types',
+      'commands'
     ]),
   },
-];
+]
 
 function prefix(prefix, children) {
-  return children.map(child => `${prefix}/${child}`);
+  return children.map(child => `${prefix}/${child}`)
 }
