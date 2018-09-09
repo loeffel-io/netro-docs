@@ -43,7 +43,7 @@ use Netro\Support\Mail;
 
 class SendEmail extends Console
 {
-    public $command = 'email:send {email}';
+    public $command = 'send:email {email}';
 
     public $description = 'Send email to a user';
 
@@ -60,4 +60,10 @@ class SendEmail extends Console
         $this->success('Send email successfully');
     }
 }
+```
+
+Now you can run this command. All dependencies from the `__construct` or `run` method will be resolved automatically.
+
+```bash
+./vendor/bin/wp send:email foo@example.com
 ```
