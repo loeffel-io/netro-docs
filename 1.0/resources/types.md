@@ -8,7 +8,7 @@ Netro types provides you a orm-like powerful and beautiful way to handle your [W
 
 ## Defining Types
 
-To get started, let's create a Type. Types typically live in the `netro/Type` directory at your theme.
+To get started, let's create a custom post type. Types typically live in the `netro/Type` directory at your theme.
 All types extend `Netro\Type\Type` class.
 
 The easiest way to create a type instance is using the make:type [wp cli command](https://wp-cli.org):
@@ -87,4 +87,110 @@ class Task extends Type
         return \Netro\Type\Task::class;
     }
 }
+```
+
+## Retrieving Types
+
+Once you have created a type, you are ready to start retrieving data from your wordpress database.
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+$tasks = Task::all();
+
+foreach ($tasks as $task) {
+    echo $task->getTitle();
+}
+```
+
+### Adding Additional Constraints
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+$tasks = Task::whereStatus('publish')
+    ->orderBy('id')
+    ->limit(3)
+    ->get();
+```
+
+## Retrieving Single Types
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+// Retrieve a type by its id...
+$task = Task::find(1);
+
+// Retrieve multiple types by there id's...
+$tasks = Task::findMany([1, 2, 3]);
+```
+
+## Retrieving Type Image and Author
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+// Retrieve the image of a type
+$task = Task::find(1)->getImage()->getPath();
+
+// Retrieve the author of a type
+$task = Task::find(1)->getAuthor()->getEmail();
+```
+
+## Inserting & Updating Types
+
+### Inserts
+
+To create a new record in the database, create a new type instance, set attributes on the type, then call the save method:
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+$task = Task::setTitle('First task')
+    ->setStatus('publish')
+    ->setContent('content')
+    ->setCreatedAt(now())
+    ->setModifiedAt(now())
+    ->save();
+```
+
+You also can add an **image** or **author** to your instance:
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+use Netro\Support\Image;
+
+$image = new Image();
+$image->setId(10);
+
+$task = Task::setTitle('First task')
+    ->setStatus('publish')
+    ->setContent('content')
+    ->setImage($image)
+    ->save();
+```
+
+### Updates
+
+```php
+<?php
+
+use \Netro\Facade\Type\Task;
+
+$task = Task::find(1)
+    ->setTitle('Updated task')
+    ->update();
 ```
