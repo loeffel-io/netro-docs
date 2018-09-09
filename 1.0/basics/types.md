@@ -18,7 +18,8 @@ The easiest way to create a type instance is using the make:type [wp cli command
 ```
 
 ::: warning Info
-Run this command in your Netro plugin directory. The first parameter is the singular noun. The second parameter is the plural definition.
+Run this command in your Netro plugin directory `wp-content/plugins/netro`  
+More informations about [commands](/1.0/deeper/commands.md)
 :::
 
 ## Type Conventions
@@ -212,7 +213,7 @@ $task = Task::find(1)->delete();
 ## Events
 
 Netro provides a few events like `saved` and `updated` with a powerful dependency resolver at your `Task.php` file.
-For example if you want to send an email notification everytime when a new type is created then just do something like this:
+For example, if you want to send an email notification everytime when a new type is created then just do something like this:
 
 ```php
 <?php
