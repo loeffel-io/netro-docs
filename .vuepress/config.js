@@ -17,7 +17,7 @@ module.exports = {
 
   themeConfig: {
     // logo: '/assets/img/logo.svg',
-    displayAllHeaders: true,
+    displayAllHeaders: false,
     sidebarDepth: 1,
 
     nav: [
