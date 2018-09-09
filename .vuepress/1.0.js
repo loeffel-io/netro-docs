@@ -7,11 +7,18 @@ module.exports = [
     ],
   },
   {
-    title: 'Resources',
+    title: 'The Basics',
     collapsable: true,
-    children: prefix('resources', [
+    children: prefix('basics', [
       '',
       'types',
+    ]),
+  },
+  {
+    title: 'Digging Deeper',
+    collapsable: true,
+    children: prefix('deeper', [
+      '',
       'commands'
     ]),
   },

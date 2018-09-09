@@ -52,8 +52,8 @@ This file includes your custom post type configurations. You can edit this file 
 public: true
 show_ui: true
 labels:
-  name: Products
-  singular_name: Product
+  name: Tasks
+  singular_name: Task
 supports:
   - title
   - thumbnail
@@ -224,7 +224,7 @@ use Netro\Support\Mail;
 
 class Task extends Type
 {
-    protected $postType = "product";
+    protected $postType = "task";
 
     public function saved(Task $task, Mail $mail)
     {

@@ -5,12 +5,19 @@ module.exports = [
     children: [''].concat(prefix('getting-started', [])),
   },
   {
-    title: 'Resources',
+    title: 'The Basics',
     collapsable: false,
-    children: prefix('resources', [
+    children: prefix('basics', [
       '',
       'types',
-      'commands'
+    ]),
+  },
+  {
+    title: 'Digging Deeper',
+    collapsable: false,
+    children: prefix('deeper', [
+      '',
+      'commands',
     ]),
   },
 ]
