@@ -1,5 +1,6 @@
 notifications:
   email: false
+  slack: false
 
 language: node_js
 
