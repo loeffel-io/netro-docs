@@ -74,7 +74,6 @@ return [
         \Netro\Console\Command\SendEmail::class,
     ],
 ];
-
 ``` 
 
 ### Running commands
