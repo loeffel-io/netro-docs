@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Netro',
   description: 'The PHP Framework for WordPress Developers',
-  base: '/docs/',
+  base: '/',
 
   head: [
     [
