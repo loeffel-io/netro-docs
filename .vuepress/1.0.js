@@ -10,15 +10,16 @@ module.exports = [
     title: 'The Basics',
     collapsable: false,
     children: prefix('basics', [
-      '',
+      'frontend',
       'types',
+      'helpers',
     ]),
   },
   {
     title: 'Digging Deeper',
     collapsable: false,
     children: prefix('deeper', [
-      '',
+      'mail',
       'commands'
     ]),
   },

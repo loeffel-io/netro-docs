@@ -62,7 +62,7 @@ class SendEmail extends Console
 }
 ```
 
-### Enabling commands
+## Enabling commands
 
 You have to enable your commands in your theme `netro/app.php` file. All dependencies from the `__construct` or `run` method will be resolved automatically.
 
@@ -76,7 +76,7 @@ return [
 ];
 ``` 
 
-### Running commands
+## Running commands
 
 Now you can run this command.
 

@@ -22,6 +22,7 @@ module.exports = {
 
     nav: [
       { text: 'API', link: 'https://api.netro.io' },
+      { text: 'GitHub', link: 'https://github.com/loeffel-io/netro' },
     ],
 
     sidebar: {
