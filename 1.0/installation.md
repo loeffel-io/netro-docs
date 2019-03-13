@@ -5,16 +5,19 @@
 ## Requirements
 
 *   PHP 7.1+
+*   [Composer](https://getcomposer.org)
+
+## Windows 
+
+Windows users should use something like [Cygwin](https://cygwin.com) or [Docker](https://www.docker.com) 
 
 ## Installing Netro
 
-Install and activate Netro from the WordPress Plugin library of your WP Admin interface.
+Install and activate the [Netro](https://github.com/loeffel-io/netro) plugin
 
 ## Installing Netro Theme
 
-[Download](https://github.com/loeffel-io/netro/archive/master.zip) the Netro Theme from [GitHub](https://github.com/loeffel-io/netro/archive/master.zip) and unzip the theme to your `wp-content/themes` directory.
-You can rename the theme directory freely. Don't forget to activate the Theme in your WP Admin interface.
-
+Install and activate the [Netro](https://github.com/loeffel-io/netro-theme) theme
 
 ## Bug Reports
 
