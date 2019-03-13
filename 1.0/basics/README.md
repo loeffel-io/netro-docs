@@ -86,10 +86,10 @@ You have nothing to do - the Netro Theme includes your dist files already in the
 
 ```php
 # header.php
-<link rel="stylesheet" type="text/css" href="<?= asset('dist/app.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?= asset('dist/app.css', false) ?>">
 
 # footer.php
-<script type="text/javascript" src="<?= asset('dist/app.js') ?>"></script>
+<script type="text/javascript" src="<?= asset('dist/app.js', false) ?>"></script>
 ```
 
 ## Customizations
