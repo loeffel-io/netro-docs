@@ -62,7 +62,24 @@ class SendEmail extends Console
 }
 ```
 
-Now you can run this command. All dependencies from the `__construct` or `run` method will be resolved automatically.
+### Enabling commands
+
+You have to enable your commands in your theme `netro/app.php` file. All dependencies from the `__construct` or `run` method will be resolved automatically.
+
+```php
+<?php
+
+return [
+    "commands" => [
+        \Netro\Console\Command\SendEmail::class,
+    ],
+];
+
+``` 
+
+### Running commands
+
+Now you can run this command.
 
 ```bash
 ./vendor/bin/wp send:email foo@example.com
