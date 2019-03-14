@@ -14,3 +14,9 @@ before_install:
 script:
   - yarn
   - yarn docs:build
+
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
