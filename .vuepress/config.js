@@ -21,7 +21,7 @@ module.exports = {
     sidebarDepth: 1,
 
     nav: [
-      { text: 'API', link: 'https://api.netro.io' },
+      { text: 'API', link: 'https://api.wp-netro.io' },
       { text: 'GitHub', link: 'https://github.com/loeffel-io/netro' },
     ],
 
