@@ -2,10 +2,6 @@
 
 [[toc]]
 
-## Introduction
-
-asdfasdf asdflasjdflk
-
 ## Available Methods
 
 *   [env](#env)

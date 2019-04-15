@@ -16,7 +16,7 @@ Windows users should use something like [Cygwin](https://cygwin.com) or [Docker]
 
 Install and activate the [Netro](https://github.com/loeffel-io/netro) plugin
 
-## Installing Netro Theme
+## Installing Netro Theme (optional)
 
 Install and activate the [Netro](https://github.com/loeffel-io/netro-theme) theme
 
